@@ -1,2 +1,2 @@
 # Ball Swipe
-A mobile game about blasting balls
+A cancelled mobile game about blasting balls
