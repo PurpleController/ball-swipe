@@ -1,7 +1,7 @@
 # Ball Swipe
 A cancelled mobile game about blasting balls
 
-# License
+## License
 
 This project is dedicated to the public domain under the CC0 1.0 Universal dedication.
 
