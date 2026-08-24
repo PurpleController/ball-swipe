@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dtth170ogtoit"]
+
+[ext_resource type="Script" uid="uid://cgfr64w5rclc3" path="res://Scripts/credits.gd" id="1_7xmno"]
+[ext_resource type="Texture2D" uid="uid://dmovlhgb234d2" path="res://Images/UI/Back.png" id="2_uy3b0"]
+[ext_resource type="Texture2D" uid="uid://01nfvv5rqgxx" path="res://Images/UI/Back Pressed.png" id="3_iynit"]
+
+[node name="Credits" type="Control" unique_id=527405418]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7xmno")
+
+[node name="BG" type="ColorRect" parent="." unique_id=140749951]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5609549, 0.5609549, 0.5609549, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1070740174]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 164.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 140
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" type="Label" parent="." unique_id=1309192173]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -477.0
+offset_right = 360.0
+offset_bottom = 486.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+text = "A game by Purple Controller
+Developers: AramCZ (Aram)
+Plugins used: AdMob Plugin by Cegniz
+Playtesters:
+Special thanks: The Godot Foundation,
+Yann Le Coroller for making the font
+Alte Haas Grotesk
+"
+horizontal_alignment = 1
+
+[node name="Back" type="TextureButton" parent="." unique_id=1673350915]
+process_mode = 3
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 116.0
+offset_bottom = 116.0
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_uy3b0")
+texture_pressed = ExtResource("3_iynit")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

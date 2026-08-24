@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cqmray6kjxovs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71axn"]
+size = Vector2(76, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3182a"]
+size = Vector2(219, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bf53h"]
+size = Vector2(126, 61)
+
+[node name="Level6" type="Node2D" unique_id=1439021949]
+
+[node name="Win zone" type="Area2D" parent="." unique_id=1598884833]
+position = Vector2(-887, 282)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win zone" unique_id=1024207014]
+position = Vector2(1007, 429.5)
+shape = SubResource("RectangleShape2D_71axn")
+
+[node name="ColorRect" type="ColorRect" parent="Win zone" unique_id=2121550399]
+offset_left = 969.0
+offset_top = 399.0
+offset_right = 1045.0
+offset_bottom = 460.0
+color = Color(1, 0.9333334, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Red zones" type="Node" parent="." unique_id=764516585]
+
+[node name="Red zone" type="Area2D" parent="Red zones" unique_id=182628824]
+position = Vector2(0, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red zones/Red zone" unique_id=1752201357]
+position = Vector2(562.5, 1199.5)
+shape = SubResource("RectangleShape2D_3182a")
+
+[node name="ColorRect" type="ColorRect" parent="Red zones/Red zone" unique_id=706839795]
+offset_left = 453.0
+offset_top = 1169.0
+offset_right = 671.0
+offset_bottom = 1230.0
+color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Red zone2" type="Area2D" parent="Red zones" unique_id=605735685]
+position = Vector2(-464, -822)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red zones/Red zone2" unique_id=1658232034]
+position = Vector2(608, 1199.5)
+shape = SubResource("RectangleShape2D_bf53h")
+
+[node name="ColorRect" type="ColorRect" parent="Red zones/Red zone2" unique_id=28954827]
+offset_left = 544.0
+offset_top = 1169.0
+offset_right = 671.0
+offset_bottom = 1230.0
+color = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true

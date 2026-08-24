@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://bw8ai24x8s5u"]
+
+[ext_resource type="Texture2D" uid="uid://dd5hq35jargkf" path="res://Images/UI/Resume.png" id="1_idj7w"]
+[ext_resource type="Script" uid="uid://qqrvhfe7f6u8" path="res://Scripts/mainmenu.gd" id="1_rgh2o"]
+[ext_resource type="Texture2D" uid="uid://dqgr4eg6paeap" path="res://Images/UI/Settings.png" id="2_jw32o"]
+[ext_resource type="Texture2D" uid="uid://ctkwr8wsmt65b" path="res://Images/UI/Resume Pressed.png" id="2_kln2b"]
+[ext_resource type="Texture2D" uid="uid://di0ehcxctyrqa" path="res://Images/UI/Quit.png" id="2_pbw6q"]
+[ext_resource type="Texture2D" uid="uid://ckrb8r7idi8qu" path="res://Images/UI/Settings Pressed.png" id="3_50glp"]
+[ext_resource type="Texture2D" uid="uid://dgbbpqmhu0pup" path="res://Images/UI/Quit Pressed.png" id="3_v1gob"]
+[ext_resource type="Texture2D" uid="uid://bx8g7enya36dl" path="res://Images/UI/Ball Swipe Logo.png" id="8_50glp"]
+[ext_resource type="Texture2D" uid="uid://dmovlhgb234d2" path="res://Images/UI/Back.png" id="9_bmxlf"]
+[ext_resource type="Texture2D" uid="uid://01nfvv5rqgxx" path="res://Images/UI/Back Pressed.png" id="10_4kpch"]
+[ext_resource type="Script" uid="uid://c4m7incgwg4kn" path="res://addons/AdmobPlugin/Admob.gd" id="11_4kpch"]
+[ext_resource type="Theme" uid="uid://ch01vuwk7buml" path="res://misc/theme.tres" id="11_grg3l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50glp"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lfam"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="Control" type="Control" unique_id=1589761869]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rgh2o")
+text = Array[String](["Go outside", "Super ez game", "Swiping your finger burns maybe", "This message is random", "This game was made by Purple Controller", "The dev is AramCZ", "Check out other games", "Better than Hell Jump", "Made with Godot and Pain", "pizza", "Made in Czech Republic", "Another greedy company made this", "ballz", "Insert Cool Text Here", "Interdimensional Knight was banished", "Source Code on Github", "This greedy dude wants ad revenue"])
+
+[node name="BG" type="ColorRect" parent="." unique_id=1175545288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5609549, 0.5609549, 0.5609549, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1466555287]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -327.6875
+offset_top = -107.0
+offset_right = 327.6875
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Settings" type="TextureButton" parent="HBoxContainer" unique_id=506677811]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_jw32o")
+texture_pressed = ExtResource("3_50glp")
+stretch_mode = 0
+
+[node name="Play" type="TextureButton" parent="HBoxContainer" unique_id=1165546787]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_idj7w")
+texture_pressed = ExtResource("2_kln2b")
+stretch_mode = 0
+
+[node name="Credits" type="TextureButton" parent="HBoxContainer" unique_id=1240249453]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_pbw6q")
+texture_pressed = ExtResource("3_v1gob")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1257185219]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -365.5
+offset_top = 62.0
+offset_right = 365.5
+offset_bottom = 333.0
+grow_horizontal = 2
+texture = ExtResource("8_50glp")
+expand_mode = 1
+
+[node name="Settings" type="Panel" parent="." unique_id=963687945]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.5
+offset_top = -488.0
+offset_right = 332.5
+offset_bottom = 488.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_50glp")
+
+[node name="Label" type="Label" parent="Settings" unique_id=1656813649]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 99.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "Settings Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="TextureButton" parent="Settings" unique_id=2062647766]
+process_mode = 3
+layout_mode = 1
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 96.5
+offset_bottom = 94.5
+size_flags_horizontal = 3
+texture_normal = ExtResource("9_bmxlf")
+texture_pressed = ExtResource("10_4kpch")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings" unique_id=1787176823]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.75
+offset_top = -388.75
+offset_right = 267.75
+offset_bottom = 388.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer" unique_id=1783807927]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 39
+text = "Sounds & Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music" type="Label" parent="Settings/VBoxContainer" unique_id=1154102692]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slider" type="HSlider" parent="Settings/VBoxContainer" unique_id=187573897]
+layout_mode = 2
+theme = ExtResource("11_grg3l")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1lfam")
+value = 100.0
+rounded = true
+
+[node name="SFX" type="Label" parent="Settings/VBoxContainer" unique_id=1429264917]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slider2" type="HSlider" parent="Settings/VBoxContainer" unique_id=664159704]
+layout_mode = 2
+theme = ExtResource("11_grg3l")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1lfam")
+value = 100.0
+rounded = true
+
+[node name="Control" type="Control" parent="." unique_id=182038765]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="text" type="Label" parent="Control" unique_id=216148409]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -323.5
+offset_top = -52.0
+offset_right = 323.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "String"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1026944664]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.652
+anchor_right = 0.5
+anchor_bottom = 0.652
+offset_left = -166.0
+offset_top = -35.059998
+offset_right = 166.0
+offset_bottom = 35.940002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+text = "High Score: "
+
+[node name="Admob" type="Node" parent="." unique_id=1871391209]
+script = ExtResource("11_4kpch")
+banner_position = 1
+android_debug_application_id = "ca-app-pub-3940256099942544~3347511713"
+android_real_application_id = "ca-app-pub-3565206398281299~5899624081"
+ios_debug_application_id = "ca-app-pub-3940256099942544/5575463023"
+ios_real_application_id = "ca-app-pub-3565206398281299~2946157689"
+metadata/_custom_type_script = "uid://c4m7incgwg4kn"
+
+[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Settings/Back" to="." method="_on_back_pressed"]
+[connection signal="consent_form_dismissed" from="Admob" to="." method="_on_admob_consent_form_dismissed"]
+[connection signal="consent_form_failed_to_load" from="Admob" to="." method="_on_admob_consent_form_failed_to_load"]
+[connection signal="consent_form_loaded" from="Admob" to="." method="_on_admob_consent_form_loaded"]
+[connection signal="consent_info_update_failed" from="Admob" to="." method="_on_admob_consent_info_update_failed"]
+[connection signal="consent_info_updated" from="Admob" to="." method="_on_admob_consent_info_updated"]
+[connection signal="initialization_completed" from="Admob" to="." method="_on_admob_initialization_completed"]
